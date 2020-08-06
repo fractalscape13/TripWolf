@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import * as firebase from "firebase";
+// import { Provider } from "react-redux";
+import { createContext } from "react";
 
-export default function App() {
+export const AuthContext = createContext();
+
+export default () => {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const auth = firebase.auth();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <Provider store={state}>
+      <AuthContext.Provider value={authContext}>
+        {loggedIn && MainNav}
+        {loggedIn === false && loading === false && AuthStack}
+        {loggedIn === false && loading === true && LoadingScreen}
+      </AuthContext.Provider>
+    // </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
