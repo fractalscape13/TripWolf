@@ -22,7 +22,7 @@ export const renderAuthStack = () => {
           name="SignIn"
           component={SignInScreen}
           options={{
-            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerRight: null,
           }}
@@ -31,7 +31,7 @@ export const renderAuthStack = () => {
           name="SignUp"
           component={SignUpScreen}
           options={{
-            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerRight: null,
           }}
@@ -40,7 +40,7 @@ export const renderAuthStack = () => {
           name="Loading"
           component={LoadingScreen}
           options={() => ({
-            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerLeft: null,
           })}
