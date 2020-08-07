@@ -5,6 +5,7 @@ import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
+import signOut from '../components/SignOut';
 
 const AuthStack = createStackNavigator();
 
@@ -22,16 +23,16 @@ export const renderAuthStack = () => {
           name="SignIn"
           component={SignInScreen}
           options={{
-            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerRight: null,
           }}
         />
-        <AuthStack.Screen
+        {/* <AuthStack.Screen
           name="SignUp"
           component={SignUpScreen}
           options={{
-            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerRight: null,
           }}
@@ -40,15 +41,15 @@ export const renderAuthStack = () => {
           name="Loading"
           component={LoadingScreen}
           options={() => ({
-            headerTitle: () => <Header isHome={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
             headerLeft: null,
           })}
-        />
-        <AuthStack.Screen
+        /> */}
+        {/* <AuthStack.Screen
           name="SignOut"
           component={signOut}
-        />
+        /> */}
       </AuthStack.Navigator>
     </NavigationContainer>
   );
