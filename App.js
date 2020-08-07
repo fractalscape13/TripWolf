@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import * as firebase from 'firebase';
-// import { Provider } from 'react-redux';
+import firebase from './firebase';
+import { Provider } from 'react-redux';
+import {Text, View} from 'react-native';
 import { createContext } from 'react';
 import LoadingScreen from './screens/LoadingScreen';
 import renderAuthStack from './navigation/AuthStack';
 import MainNav from './navigation/MainNav';
+
 
 export const AuthContext = createContext();
 
@@ -35,10 +37,11 @@ export default () => {
   return (
     // <Provider store={state}>
       <AuthContext.Provider value={authContext}>
-        {loggedIn && MainNav}
-        {loggedIn === false && loading === false && renderAuthStack}
-        {loggedIn === false && loading === true && LoadingScreen}
+        <Text style={{paddingTop: 200, flex: 1, backgroundColor: "cyan", fontSize: 100}}>HELLO</Text>
+         {loggedIn && MainNav}
+         {loggedIn === false && loading === false && renderAuthStack}
+         {loggedIn === false && loading === true && LoadingScreen}
       </AuthContext.Provider>
-    // </Provider>
+    //  </Provider>
   );
 }
