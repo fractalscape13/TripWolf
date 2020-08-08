@@ -59,10 +59,15 @@ const styles = StyleSheet.create({
   },
   hamburger: {
     alignSelf: "flex-end",
+    color: "white"
   },
+  backIcon: {
+    color: "white"
+  },  
   navIconLeft: {
     flex: 1,
     width: '25%',
+    color: "white"
   },
   navIconLeftHidden: {
     opacity: 0,
@@ -72,6 +77,7 @@ const styles = StyleSheet.create({
   navIconRight: {
     flex: 1,
     width: '25%',
+    color: "white"
   },
   navIconRightHidden: {
     opacity: 0,

@@ -25,16 +25,16 @@ export const renderAuthStack = () => {
           options={{
             headerTitle: () => <Header isSplash={true}/>,
             headerStyle: headerStyle,
-            headerRight: null,
           }}
         />
         <AuthStack.Screen
           name="SignUp"
           component={SignUpScreen}
           options={{
-            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isHome={false} subheaderTitle={"Create Account"}/>,
             headerStyle: headerStyle,
-            headerRight: null,
+            headerLeft: null,
+            headerRight: null
           }}
         />
         {/* <AuthStack.Screen
@@ -43,7 +43,8 @@ export const renderAuthStack = () => {
           options={() => ({
             headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
             headerStyle: headerStyle,
-            headerLeft: null,
+            headerRight: null,
+            headerLeft: null
           })}
         />
         <AuthStack.Screen
