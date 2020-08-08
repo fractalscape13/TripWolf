@@ -1,9 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import firebase from './firebase';
 import { Provider } from 'react-redux';
-import {Text, View} from 'react-native';
 import { createContext } from 'react';
-import LoadingScreen from './screens/LoadingScreen';
+import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';
 import MainNav from './navigation/MainNav';
 
@@ -40,7 +39,7 @@ export default () => {
       <AuthContext.Provider value={authContext}>
          {loggedIn && MainNav}
          {loggedIn === false && loading === false && renderAuthStack()}
-         {loggedIn === false && loading === true && LoadingScreen}
+         {loggedIn === false && loading === true && LoadingScreen()}
       </AuthContext.Provider>
     //  </Provider>
   );
