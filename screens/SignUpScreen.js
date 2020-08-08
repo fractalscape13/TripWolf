@@ -64,7 +64,7 @@ const SignUpScreen = ({ navigation }) => {
       <ImageBackground source={goblin} style={styles.MainContainer}>
         <View style={styles.textWrapper}>
           <TextInput
-            placeholder="First Name"
+            placeholder="Choose a username"
             value={userName}
             onChangeText={setUserName}
             style={styles.input}
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   textWrapper: {
     alignItems: "center",
     justifyContent: "flex-start",
-    backgroundColor: "rgba(16,16,16,0.8)",
+    backgroundColor: "rgba(16,16,16,0.5)",
     padding: 50,
     width: "100%",
     height: "100%",
