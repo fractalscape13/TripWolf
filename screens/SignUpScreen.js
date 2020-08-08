@@ -98,7 +98,7 @@ const SignUpScreen = ({ navigation }) => {
           <TouchableOpacity style={styles.button} onPress={signUp}>
             <Text style={styles.buttontext}>Sign up</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>
+          <TouchableOpacity onPress={() => navigation.navigate("SignInScreen")}>
             <Text style={styles.linkText}>Return to sign in</Text>
           </TouchableOpacity>
         </View>
@@ -152,6 +152,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: 35,
     width: 100,
+    borderRadius: 5,
+    borderColor: "#DDE2E4",
+    borderWidth: 1
   },
   buttontext: {
     fontSize: 20,

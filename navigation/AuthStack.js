@@ -20,7 +20,7 @@ export const renderAuthStack = () => {
     <NavigationContainer>
       <AuthStack.Navigator>
         <AuthStack.Screen
-          name="SignIn"
+          name="SignInScreen"
           component={SignInScreen}
           options={{
             headerTitle: () => <Header isSplash={true}/>,
@@ -28,7 +28,7 @@ export const renderAuthStack = () => {
           }}
         />
         <AuthStack.Screen
-          name="SignUp"
+          name="SignUpScreen"
           component={SignUpScreen}
           options={{
             headerTitle: () => <Header isHome={false} subheaderTitle={"Create Account"}/>,

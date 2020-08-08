@@ -18,7 +18,7 @@ const Header = (props) => {
     <View style={styles.MainHeaderWrapper}>
          <View style={ props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} pointerEvents={ props.isSplash ? "none" : props.isHome? 'none' : 'auto'}>
             <Ionicons
-            style={styles.backIcon}
+            // style={styles.backIcon}
             onPress={() => {navigation.goBack()}}
             name="ios-arrow-back"
             size={45}
@@ -55,37 +55,25 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     height: '100%',
-    flex: 1,
   },
   hamburger: {
     alignSelf: "flex-end",
-    color: "white"
   },
-  backIcon: {
-    color: "white"
-  },  
   navIconLeft: {
-    flex: 1,
     width: '25%',
-    color: "white"
   },
   navIconLeftHidden: {
     opacity: 0,
-    flex: 1,
     width: '25%',
   },
   navIconRight: {
-    flex: 1,
     width: '25%',
-    color: "white"
   },
   navIconRightHidden: {
     opacity: 0,
-    flex: 1,
     width: '25%',
   },
   logoContainer: {
-    flex: 1,
     width: '50%',
   },
 });

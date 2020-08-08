@@ -76,7 +76,7 @@ const SignInScreen = ({ navigation }) => {
           <TouchableOpacity style={styles.signIn} onPress={signIn}>
             <Text style={styles.text}>SIGN IN</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.push("SignUp")}>
+          <TouchableOpacity onPress={() => navigation.push("SignUpScreen")}>
             <Text style={styles.buttonText}>New? Click to create an account</Text>
           </TouchableOpacity>
         {/* </View> */}
