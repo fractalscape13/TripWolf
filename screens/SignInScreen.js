@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import * as firebase from "firebase";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import goblin from '../assets/goblin.png';
 
 
 const SignInScreen = ({ navigation }) => {
@@ -52,8 +53,8 @@ const SignInScreen = ({ navigation }) => {
 
   return (
     <KeyboardAwareScrollView style={styles.keyboardAwareStyle}>
-      {/* <ImageBackground source={landingPageImage} style={styles.MainContainer}> */}
-        <View style={styles.MainContainer}>
+      <ImageBackground source={goblin} style={styles.MainContainer}>
+        {/* <View style={styles.MainContainer}> */}
           <TouchableOpacity>
             <TextInput
               placeholder="Email"
@@ -78,8 +79,8 @@ const SignInScreen = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.push("SignUp")}>
             <Text style={styles.buttonText}>or Create an Account</Text>
           </TouchableOpacity>
-        </View>
-      {/* </ImageBackground> */}
+        {/* </View> */}
+      </ImageBackground>
     </KeyboardAwareScrollView>
   );
 }
@@ -87,10 +88,10 @@ const SignInScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   keyboardAwareStyle: {
     flex: 1,
-    backgroundColor: "rgba(16,16,16, 0.6)",
+    backgroundColor: "rgb(16,16,16)",
   },
   MainContainer: {
-    paddingTop: "40%",
+    paddingTop: "46%",
     alignItems: "center",
     justifyContent: "center",
     justifyContent: "flex-start",
@@ -135,6 +136,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 5,
     borderRadius: 5,
+    borderColor: "#DDE2E4",
+    borderWidth: 1
   },
 });
 
