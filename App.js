@@ -6,7 +6,6 @@ import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';
 import MainNav from './navigation/MainNav';
 
-
 export const AuthContext = createContext();
 console.disableYellowBox = true;
 

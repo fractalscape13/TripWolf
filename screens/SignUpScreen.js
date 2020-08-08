@@ -1,14 +1,5 @@
 import React, { useState, useContext } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-  ImageBackground,
-  Alert,
-  Dimensions,
-} from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, TextInput, ImageBackground, Alert, Dimensions } from "react-native";
 import { AuthContext } from "../App";
 import * as firebase from "firebase";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -27,7 +18,7 @@ const SignUpScreen = ({ navigation }) => {
 
   async function signUp(e) {
     e.preventDefault();
-    navigation.push("Loading");
+    navigation.push("LoadingScreen");
 
     if (userName.trim() === "") {
       Alert.alert("Please choose a username");

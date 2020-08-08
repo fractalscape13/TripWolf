@@ -1,14 +1,11 @@
-  import React, { useState } from "react";
+import React, { useState } from "react";
 import {
   Text,
-  View,
   StyleSheet,
   TouchableOpacity,
   TextInput,
   Alert,
-  Image,
   ImageBackground,
-  Dimensions,
 } from "react-native";
 import * as firebase from "firebase";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -54,7 +51,6 @@ const SignInScreen = ({ navigation }) => {
   return (
     <KeyboardAwareScrollView style={styles.keyboardAwareStyle}>
       <ImageBackground source={goblin} style={styles.MainContainer}>
-        {/* <View style={styles.MainContainer}> */}
           <TouchableOpacity>
             <TextInput
               placeholder="Email"
@@ -79,7 +75,6 @@ const SignInScreen = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.push("SignUpScreen")}>
             <Text style={styles.buttonText}>New? Click to create an account</Text>
           </TouchableOpacity>
-        {/* </View> */}
       </ImageBackground>
     </KeyboardAwareScrollView>
   );

@@ -37,8 +37,8 @@ export const renderAuthStack = () => {
             headerRight: null
           }}
         />
-        {/* <AuthStack.Screen
-          name="Loading"
+        <AuthStack.Screen
+          name="LoadingScreen"
           component={LoadingScreen}
           options={() => ({
             headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
@@ -50,7 +50,7 @@ export const renderAuthStack = () => {
         <AuthStack.Screen
           name="SignOut"
           component={signOut}
-        /> */}
+        />
       </AuthStack.Navigator>
     </NavigationContainer>
   );
