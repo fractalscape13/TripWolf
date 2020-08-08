@@ -77,7 +77,7 @@ const SignInScreen = ({ navigation }) => {
             <Text style={styles.text}>SIGN IN</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.push("SignUp")}>
-            <Text style={styles.buttonText}>or Create an Account</Text>
+            <Text style={styles.buttonText}>New? Click to create an account</Text>
           </TouchableOpacity>
         {/* </View> */}
       </ImageBackground>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(16,16,16)",
   },
   MainContainer: {
-    paddingTop: "46%",
+    paddingTop: "60%",
     alignItems: "center",
     justifyContent: "center",
     justifyContent: "flex-start",

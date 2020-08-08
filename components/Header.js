@@ -16,7 +16,7 @@ const Header = (props) => {
 
   return (
     <View style={styles.MainHeaderWrapper}>
-         <View style={props.isMappable ? styles.navIconLeft : props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} pointerEvents={props.isMappable ? "auto" : props.isSplash ? "none" : props.isHome? 'none' : 'auto'}>
+         <View style={ props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} pointerEvents={ props.isSplash ? "none" : props.isHome? 'none' : 'auto'}>
             <Ionicons
             style={styles.backIcon}
             onPress={() => {navigation.goBack()}}
@@ -33,7 +33,7 @@ const Header = (props) => {
             <Text style={{fontSize: 30, fontWeight: "250", color: "white", }}>TripWolf</Text>
           }
         </View>
-        <View style={props.isSplash ? styles.navIconRightHidden : props.isHome? styles.navIconRight : styles.navIconRightHidden} pointerEvents={ props.isSplash ? "none" :props.isHome? 'auto' : 'none'}>
+        <View style={props.isSplash ? styles.navIconRightHidden : props.isHome? styles.navIconRight : styles.navIconRightHidden} pointerEvents={ props.isSplash ? "none" : props.isHome? 'auto' : 'none'}>
           <Ionicons
           style={styles.hamburger}
           onPress={() => {

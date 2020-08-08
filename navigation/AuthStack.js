@@ -23,12 +23,12 @@ export const renderAuthStack = () => {
           name="SignIn"
           component={SignInScreen}
           options={{
-            headerTitle: () => <Header isSplash={true} subheaderTitle={" "}/>,
+            headerTitle: () => <Header isSplash={true}/>,
             headerStyle: headerStyle,
             headerRight: null,
           }}
         />
-        {/* <AuthStack.Screen
+        <AuthStack.Screen
           name="SignUp"
           component={SignUpScreen}
           options={{
@@ -37,7 +37,7 @@ export const renderAuthStack = () => {
             headerRight: null,
           }}
         />
-        <AuthStack.Screen
+        {/* <AuthStack.Screen
           name="Loading"
           component={LoadingScreen}
           options={() => ({
@@ -45,8 +45,8 @@ export const renderAuthStack = () => {
             headerStyle: headerStyle,
             headerLeft: null,
           })}
-        /> */}
-        {/* <AuthStack.Screen
+        />
+        <AuthStack.Screen
           name="SignOut"
           component={signOut}
         /> */}
