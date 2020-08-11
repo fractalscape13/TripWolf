@@ -13,9 +13,8 @@ export const renderMainNav = (
       drawerContentOptions={{activeTintColor: "white",inactiveTintColor: "#DDE2E4", height: "100%", activeBackgroundColor: "#535756"}}
       >
         <MainNav.Screen name="Home" component={TabNav}/>
-        <MainNav.Screen name="Profile" component={ClientProfileNavigator}/>
-        <MainNav.Screen name="About" component={AboutNavigation}/>
-        <MainNav.Screen name="Support" component={SupportNavigation}/>
+        <MainNav.Screen name="Profile" component={ProfileStack}/>
+        <MainNav.Screen name="About" component={AboutScreen}/>
         <MainNav.Screen name="Sign out" component={() => signOut()}/>
       </MainNav.Navigator>
     </NavigationContainer>
