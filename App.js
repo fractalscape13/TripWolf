@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createContext } from 'react';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';
-import MainNav from './navigation/MainNav';
+import { renderMainNav } from './navigation/MainNav';
 
 export const AuthContext = createContext();
 console.disableYellowBox = true;
@@ -36,7 +36,7 @@ export default () => {
   return (
     // <Provider store={state}>
       <AuthContext.Provider value={authContext}>
-         {loggedIn && MainNav}
+         {loggedIn && renderMainNav()}
          {loggedIn === false && loading === false && renderAuthStack()}
          {loggedIn === false && loading === true && LoadingScreen()}
       </AuthContext.Provider>
