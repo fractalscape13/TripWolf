@@ -1,6 +1,9 @@
 import React from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import TabNav from '../navigation/TabNav';
+import ProfileStack from '../navigation/ProfileStack';
+import AboutScreen from '../screens/AboutScreen';
 import signOut from '../components/SignOut';
 
 const MainNav = createDrawerNavigator();
