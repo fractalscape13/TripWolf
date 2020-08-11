@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import firebase from './firebase';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import { createContext } from 'react';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';

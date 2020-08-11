@@ -15,7 +15,7 @@ const TabNav = () => {
           name="HomeScreen" 
           component={HomeScreen} 
           options={{
-            tabBarIcon: ({color}) => (<FontAwesome name="plus" size={28} color={color} />),
+            tabBarIcon: ({color}) => (<FontAwesome name="home" size={28} color={color} />),
           }}
           />
         {/* <Tabs.Screen 
