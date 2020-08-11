@@ -5,7 +5,6 @@ import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
-import signOut from '../components/SignOut';
 
 const AuthStack = createStackNavigator();
 
@@ -46,10 +45,6 @@ export const renderAuthStack = () => {
             headerRight: null,
             headerLeft: null
           })}
-        />
-        <AuthStack.Screen
-          name="SignOut"
-          component={signOut}
         />
       </AuthStack.Navigator>
     </NavigationContainer>
