@@ -32,14 +32,20 @@ const SignUpScreen = ({ navigation }) => {
     } else if (password !== passwordConfirm) {
       Alert.alert("Passwords don't match, please try again");
       navigation.navigate("SignUpScreen");
-    } 
-
+    } else {
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+      } catch (error) {
+        Alert.alert(error.message);
+        navigation.navigate("SignUpScreen");
+      }
       let user = firebase.auth().currentUser;
       await user.updateProfile({
         displayName: userName,
       });
       await user.reload().then(updateUser());
       const userID = user.uid;
+    }
   }
 
   return (

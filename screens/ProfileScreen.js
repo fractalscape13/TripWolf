@@ -1,20 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import goblin from '../assets/goblin.png';
-import { Entypo } from '@expo/vector-icons'; 
-import { Linking } from 'expo';
 
-const AboutScreen = () => {
+const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>TripWolf is a container for you to keep track of the places you've been or want to visit</Text>
-        <View style={styles.socialMediaContainer}>
-          <Entypo name="facebook" size={35} color="white" onPress={() => Linking.openURL('https://www.facebook.com/zeffmeister/')} />
-          <Entypo name="instagram" size={35} color="white" onPress={() => Linking.openURL('https://www.instagram.com/fractalscape/')} />
-          <Entypo name="linkedin" size={35} color="white" onPress={() => Linking.openURL('https://www.linkedin.com/josephwangemann/')} />
-        </View>
+        <Text style={styles.body}>YOUR PROFILE</Text>
       </View>
     </View>
   )
@@ -23,15 +16,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
-  },
-  socialMediaContainer: {
-    flexDirection: "row",
-    width: "100%",
-    height: 40,
-    marginTop: 25,
-    justifyContent: "space-evenly",
-    paddingHorizontal: "10%",
     alignItems: "center",
   },
   textWrapper: {
@@ -62,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AboutScreen;
+export default ProfileScreen;

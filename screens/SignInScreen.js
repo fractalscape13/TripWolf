@@ -27,7 +27,7 @@ const SignInScreen = ({ navigation }) => {
       Alert.alert("Please enter a password");
       return;
     }
-    navigation.push("Loading");
+    navigation.push("LoadingScreen");
     try {
       firebase
         .auth()

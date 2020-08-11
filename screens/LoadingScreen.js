@@ -1,12 +1,13 @@
 import React from 'react';
 import { Image, Text, View, StyleSheet } from 'react-native';
+import splash from '../assets/splash.png';
 
 const LoadingScreen = () => {
 
   return (
     <View style={styles.main}>
       <Text style={styles.text}>L O A D I N G</Text>
-      {/* <Image source={loadingGIF} style={styles.image}/> */}
+      <Image source={splash} style={styles.image}/>
     </View>
   )
 }
@@ -21,11 +22,11 @@ const styles = StyleSheet.create({
   text: {
     color: "cyan",
     fontSize: 50
+  },
+  image: {
+    width: 270,
+    height: 200
   }
-  // image: {
-  //   width: 300,
-  //   height: 300
-  // }
 });
 
 export default LoadingScreen;
