@@ -1,14 +1,13 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import ProfileScreen from '../screens/ProfileScreen';
-import EditProfileScreen from '../screens/EditProfileScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
+import HomeScreen from '../screens/HomeScreen';
 
-const ProfileStack = createStackNavigator();
+const HomeStack = createStackNavigator();
 
-export const renderProfileStack = () => {
+const HomeStackNav = () => {
   const headerStyle = {
     backgroundColor: "#161616",
     width: "100%",
@@ -16,16 +15,17 @@ export const renderProfileStack = () => {
   };
 
   return (
-      <ProfileStack.Navigator>
-        <ProfileStack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
+      <HomeStack.Navigator>
+        <HomeStack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
           options={{
-            headerTitle: () => <Header isSplash={true}/>,
+            headerTitle: () => <Header isHome={true}
+            subheaderTitle={" "}/>,
             headerStyle: headerStyle,
           }}
         />
-        <ProfileStack.Screen
+        {/* <HomeStack.Screen
           name="EditProfileScreen"
           component={EditProfileScreen}
           options={{
@@ -34,8 +34,8 @@ export const renderProfileStack = () => {
             headerLeft: null,
             headerRight: null
           }}
-        />
-        <ProfileStack.Screen
+        /> */}
+        <HomeStack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
           options={() => ({
@@ -45,6 +45,8 @@ export const renderProfileStack = () => {
             headerLeft: null
           })}
         />
-      </ProfileStack.Navigator>
+      </HomeStack.Navigator>
   );
 };
+
+export default HomeStackNav;

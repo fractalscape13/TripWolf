@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import goblin from '../assets/goblin.png';
 
-const HomeScreen = () => {
+const MapScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>H O M E</Text>
+        <Text style={styles.body}>M A P</Text>
       </View>
     </View>
   )
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(16,16,16, 0.4)",
+    backgroundColor: "rgba(16,16,16, 0.5)",
     paddingVertical: 40,
     paddingHorizontal: 20,
   },
@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
   },
   body: {
     marginTop: 10,
-    fontSize: 18,
+    fontSize: 28,
     color: "white",
     textAlign: "center",
   },
 });
 
-export default HomeScreen;
+export default MapScreen;

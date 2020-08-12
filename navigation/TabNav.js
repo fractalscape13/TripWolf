@@ -3,7 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import MessagingNavigation from './MessagingNavigation';
 import { FontAwesome5, Entypo, FontAwesome } from '@expo/vector-icons';
 import { StyleSheet, View, Text } from "react-native";
-import HomeScreen from '../screens/HomeScreen';
+import { renderExploreStack } from '../navigation/ExploreStack';
+import { renderAddStack } from '../navigation/AddStack';
+import HomeStackNav from '../navigation/HomeStack';
 
 const TabNav = () => {
 
@@ -12,31 +14,24 @@ const TabNav = () => {
   return (
       <Tabs.Navigator tabBarOptions={{activeBackgroundColor: "#DDE2E4", inactiveBackgroundColor: "#161616", activeTintColor: "#161616", inactiveTintColor: "#DDE2E4", showLabel: false}}>
         <Tabs.Screen 
-          name="HomeScreen" 
-          component={HomeScreen} 
+          name="HomeStack" 
+          component={HomeStackNav} 
           options={{
             tabBarIcon: ({color}) => (<FontAwesome name="home" size={28} color={color} />),
           }}
           />
-        {/* <Tabs.Screen 
-          name="Projects" 
-          component={Add}
+        <Tabs.Screen 
+          name="AddStack" 
+          component={renderAddStack}
           options={{
-            tabBarIcon: ({color}) => (<FontAwesome5 name="helicopter" size={22} color={color}/>)
+            tabBarIcon: ({color}) => (<FontAwesome5 name="plus" size={22} color={color}/>)
           }} />
         <Tabs.Screen 
-          name="Messages" 
-          component={MessagingNavigation}
-          options={unreadMessages.length > 0 ? {
-            tabBarIcon: ({color}) => (
-              <View>
-                <View style={styles.dot}>
-                  <Text />
-                </View>
-                <Entypo name="message" size={30} color={color} resizeMode="contain" style={styles.messageIcon}/>
-              </View>  ) } : {
-              tabBarIcon: ({color}) => (<Entypo name="message" size={30} color={color} />) } }
-        /> */}
+          name="ExploreStack" 
+          component={renderExploreStack}
+          options={{
+              tabBarIcon: ({color}) => (<Entypo name="globe" size={30} color={color} />) 
+            }} />
       </Tabs.Navigator>
   );
 }

@@ -3,6 +3,7 @@ import {
   Text,
   View,
   StyleSheet,
+  Dimensions
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, DrawerActions } from "@react-navigation/native";
@@ -46,12 +47,16 @@ const Header = (props) => {
   );
 };
 
+const width = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   MainHeaderWrapper: {
     flexDirection: "row",
     alignItems: 'center',
     justifyContent: 'space-between',
     height: '100%',
+    width: width - 35,
+    flex: 1,
   },
   hamburger: {
     alignSelf: "flex-end",

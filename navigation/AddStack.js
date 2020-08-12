@@ -1,14 +1,13 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import ProfileScreen from '../screens/ProfileScreen';
-import EditProfileScreen from '../screens/EditProfileScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
+import AddScreen from '../screens/AddScreen';
 
-const ProfileStack = createStackNavigator();
+const AddStack = createStackNavigator();
 
-export const renderProfileStack = () => {
+export const renderAddStack = () => {
   const headerStyle = {
     backgroundColor: "#161616",
     width: "100%",
@@ -16,16 +15,17 @@ export const renderProfileStack = () => {
   };
 
   return (
-      <ProfileStack.Navigator>
-        <ProfileStack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
+      <AddStack.Navigator>
+        <AddStack.Screen
+          name="AddScreen"
+          component={AddScreen}
           options={{
-            headerTitle: () => <Header isSplash={true}/>,
+            headerTitle: () => <Header isHome={true}
+            subheaderTitle={"Add a new entry"}/>,
             headerStyle: headerStyle,
           }}
         />
-        <ProfileStack.Screen
+        {/* <AddStack.Screen
           name="EditProfileScreen"
           component={EditProfileScreen}
           options={{
@@ -34,8 +34,8 @@ export const renderProfileStack = () => {
             headerLeft: null,
             headerRight: null
           }}
-        />
-        <ProfileStack.Screen
+        /> */}
+        <AddStack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
           options={() => ({
@@ -45,6 +45,6 @@ export const renderProfileStack = () => {
             headerLeft: null
           })}
         />
-      </ProfileStack.Navigator>
+      </AddStack.Navigator>
   );
 };
