@@ -5,6 +5,7 @@ import { createContext } from 'react';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';
 import { MainNav } from './navigation/MainNav';
+import Footer from './components/Footer';
 
 export const AuthContext = createContext();
 console.disableYellowBox = true;
@@ -39,6 +40,7 @@ export default () => {
          {loggedIn && MainNav}
          {loggedIn === false && loading === false && renderAuthStack()}
          {loggedIn === false && loading === true && LoadingScreen()}
+         <Footer />
       </AuthContext.Provider>
     //  </Provider>
   );

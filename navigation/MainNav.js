@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNav from '../navigation/TabNav';
 import { renderProfileStack } from '../navigation/ProfileStack';
-import AboutScreen from '../screens/AboutScreen';
+import { renderAboutStack } from '../navigation/AboutStack';
 import signOut from '../components/SignOut';
 
 const MainDrawer = createDrawerNavigator();
@@ -17,7 +17,7 @@ const MainNav = (
       >
         <MainDrawer.Screen name="Home" component={TabNav}/>
         <MainDrawer.Screen name="Profile" component={renderProfileStack}/>
-        <MainDrawer.Screen name="About" component={AboutScreen}/>
+        <MainDrawer.Screen name="About" component={renderAboutStack}/>
         <MainDrawer.Screen name="Sign out" component={() => signOut()}/>
       </MainDrawer.Navigator>
     </NavigationContainer>

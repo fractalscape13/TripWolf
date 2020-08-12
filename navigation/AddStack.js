@@ -1,6 +1,5 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from '@react-navigation/native';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
 import AddScreen from '../screens/AddScreen';
@@ -21,7 +20,7 @@ export const renderAddStack = () => {
           component={AddScreen}
           options={{
             headerTitle: () => <Header isHome={true}
-            subheaderTitle={"Add a new entry"}/>,
+            subheaderTitle={"Create"}/>,
             headerStyle: headerStyle,
           }}
         />

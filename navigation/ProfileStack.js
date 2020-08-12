@@ -21,7 +21,7 @@ export const renderProfileStack = () => {
           name="ProfileScreen"
           component={ProfileScreen}
           options={{
-            headerTitle: () => <Header isSplash={true}/>,
+            headerTitle: () => <Header subheaderTitle={"Profile"}/>,
             headerStyle: headerStyle,
           }}
         />

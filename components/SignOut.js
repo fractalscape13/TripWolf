@@ -1,9 +1,9 @@
 import * as firebase from "firebase";
 
-const signOut = ({ navigation }) => {
+const signOut = (props) => {
   try {
     firebase.auth().signOut();
-    navigation.navigate("SignInScreen");
+    props.navigation.navigate("SignInScreen");
   } catch (error) {}
   return null;
 };

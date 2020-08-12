@@ -7,7 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 
 const HomeStack = createStackNavigator();
 
-const HomeStackNav = () => {
+export const renderHomeStack = () => {
   const headerStyle = {
     backgroundColor: "#161616",
     width: "100%",
@@ -48,5 +48,3 @@ const HomeStackNav = () => {
       </HomeStack.Navigator>
   );
 };
-
-export default HomeStackNav;

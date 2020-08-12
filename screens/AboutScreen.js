@@ -9,11 +9,11 @@ const AboutScreen = () => {
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>TripWolf is a container for you to keep track of the places you've been or want to visit</Text>
+        <Text style={styles.body}>TripWolf is a container for you to keep track of the places you've been or want to explore</Text>
         <View style={styles.socialMediaContainer}>
-          <Entypo name="facebook" size={35} color="white" onPress={() => Linking.openURL('https://www.facebook.com/zeffmeister/')} />
+          <Entypo name="github" size={35} color="white" onPress={() => Linking.openURL('https://github.com/fractalscape13')} />
           <Entypo name="instagram" size={35} color="white" onPress={() => Linking.openURL('https://www.instagram.com/fractalscape/')} />
-          <Entypo name="linkedin" size={35} color="white" onPress={() => Linking.openURL('https://www.linkedin.com/josephwangemann/')} />
+          <Entypo name="linkedin" size={35} color="white" onPress={() => Linking.openURL('https://www.linkedin.com/in/josephwangemann/')} />
         </View>
       </View>
     </View>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     height: 40,
-    marginTop: 25,
+    marginTop: 55,
     justifyContent: "space-evenly",
     paddingHorizontal: "10%",
     alignItems: "center",
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(16,16,16, 0.5)",
+    backgroundColor: "rgba(16,16,16, 0.4)",
     paddingVertical: 40,
     paddingHorizontal: 20,
   },
@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   body: {
-    marginTop: 10,
     fontSize: 18,
     color: "white",
     textAlign: "center",
