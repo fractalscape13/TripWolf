@@ -12,9 +12,9 @@ _Cross-platform mobile app for storing info and images from places you have been
 * If a user is already registered, the link at the bottom will return to the sign-in page.
 ![Register](./src/assets/registerview.png?raw=true "Register view")
 * After sign-in, the main travel log will be shown.  
-![Feed](./src/assets/mainview.png?raw=true "Main splash screen")
-* In account view...
-![Acct](./src/assets/accountview.png?raw=true "Account view")
+![Home](./src/assets/mainview.png?raw=true "Main splash screen")
+* In profile view...
+![Profile](./src/assets/accountview.png?raw=true "Account view")
 
 ## Installation/Setup Instructions
 To run this project, you will:
@@ -26,7 +26,7 @@ To run this project, you will:
   * Open the project with Expo in your mobile simulator/emulator or on your device
 
 ## Technologies Used
-* React / React Native
+* React Native
 * Expo CLI
 * Firebase
 
