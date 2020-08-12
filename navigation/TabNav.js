@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import MessagingNavigation from './MessagingNavigation';
-import { FontAwesome5, Entypo, FontAwesome } from '@expo/vector-icons';
+import { FontAwesome5, Entypo } from '@expo/vector-icons';
 import { StyleSheet } from "react-native";
 import { renderExploreStack } from '../navigation/ExploreStack';
 import { renderAddStack } from '../navigation/AddStack';
@@ -17,7 +17,7 @@ const TabNav = () => {
           name="HomeStack" 
           component={renderHomeStack} 
           options={{
-            tabBarIcon: ({color}) => (<FontAwesome name="home" size={28} color={color} />),
+            tabBarIcon: ({color}) => (<Entypo name="home" size={28} color={color} />),
           }}
           />
         <Tabs.Screen 
