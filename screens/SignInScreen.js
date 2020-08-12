@@ -94,14 +94,6 @@ const styles = StyleSheet.create({
     width: "100%",
     resizeMode: "contain",
   },
-  // opacityWrapper:{
-  //   backgroundColor: "rgba(16,16,16, 0.4)",
-  //   width: "100%",
-  //   height: "100%",
-  //   paddingTop: "35%",
-  //   alignItems: "center",
-  //   justifyContent: "flex-start",
-  // },
   buttonText: {
     textAlign: "center",
     color: "#DDE2E4",
