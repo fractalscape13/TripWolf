@@ -121,11 +121,11 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    color: "#DDE2E4",
+    color: "rgb(16,16,16)",
     fontSize: 19,
   },
   signIn: {
-    backgroundColor: "rgb(16,16,16)",
+    backgroundColor: "#DDE2E4",
     width: 100,
     marginTop: 15,
     marginBottom: 10,
