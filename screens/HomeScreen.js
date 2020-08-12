@@ -7,7 +7,9 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>H O M E</Text>
+        <Text style={styles.body}>T  R  I  P</Text>
+        <Text style={styles.body}>FUCKING</Text>
+        <Text style={styles.body}>W  O  L  F</Text>
       </View>
     </View>
   )
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
   },
   body: {
     marginTop: 10,
-    fontSize: 18,
+    fontSize: 38,
     color: "white",
     textAlign: "center",
   },

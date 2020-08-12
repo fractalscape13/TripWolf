@@ -10,6 +10,7 @@ const AboutScreen = () => {
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
         <Text style={styles.body}>TripWolf is a container for you to keep track of the places you've been or want to explore</Text>
+        <Text style={styles.body}>Feel free to contact me through any of the links below</Text>
         <View style={styles.socialMediaContainer}>
           <Entypo name="github" size={35} color="white" onPress={() => Linking.openURL('https://github.com/fractalscape13')} />
           <Entypo name="instagram" size={35} color="white" onPress={() => Linking.openURL('https://www.instagram.com/fractalscape/')} />
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   body: {
+    marginTop: 25,
     fontSize: 18,
     color: "white",
     textAlign: "center",
