@@ -110,6 +110,8 @@ const styles = StyleSheet.create({
     color: "#DDE2E4",
     backgroundColor: "rgba(16,16,16,0.8)",
     padding: "2%",
+    textAlign: "center",
+    fontSize: 20
   },
   text: {
     textAlign: "center",
@@ -119,8 +121,8 @@ const styles = StyleSheet.create({
   signIn: {
     backgroundColor: "#DDE2E4",
     width: 100,
-    marginTop: 15,
-    marginBottom: 10,
+    marginTop: 20,
+    marginBottom: 15,
     padding: 5,
     borderRadius: 5,
     borderColor: "#DDE2E4",
