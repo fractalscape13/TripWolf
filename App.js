@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import firebase from './firebase';
-// import { Provider } from 'react-redux';
 import { createContext } from 'react';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { renderAuthStack } from './navigation/AuthStack';
@@ -35,13 +34,11 @@ export default () => {
   });
 
   return (
-    // <Provider store={state}>
       <AuthContext.Provider value={authContext}>
          {loggedIn && MainNav}
          {loggedIn === false && loading === false && renderAuthStack()}
          {loggedIn === false && loading === true && LoadingScreen()}
          <Footer />
       </AuthContext.Provider>
-    //  </Provider>
   );
 }
