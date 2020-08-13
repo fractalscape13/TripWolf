@@ -36,6 +36,6 @@ _If you have any questions or comments at all, please submit a pull request._
 
 ### License
 
-*This webpage is licensed under the MIT license.*
+*This application is licensed under the MIT license.*
 
 &copy; 2020 **_Joseph Wangemann_**
