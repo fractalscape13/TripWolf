@@ -16,7 +16,7 @@ const SignUpScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  async function signUp(e) {
+  const signUp = async (e) => {
     e.preventDefault();
     navigation.push("LoadingScreen");
 
