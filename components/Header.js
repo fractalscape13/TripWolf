@@ -16,7 +16,6 @@ const Header = (props) => {
     <View style={styles.MainHeaderWrapper}>
          <View style={ props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} pointerEvents={ props.isSplash ? "none" : props.isHome? 'none' : 'auto'}>
             <Ionicons
-            // style={styles.backIcon}
             onPress={() => {navigation.goBack()}}
             name="ios-arrow-back"
             size={45}
