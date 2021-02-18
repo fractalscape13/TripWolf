@@ -1,6 +1,6 @@
 # TripWolf
 
-#### _August 2020_
+#### _Feb 2021_
 #### By _**Joseph Wangemann**_
 
 ## Description
@@ -27,7 +27,9 @@ To run this project, you will:
 
 ## Technologies Used
 * React Native
-* Expo CLI
+* Node
+* Express
+* Postgres
 * Firebase
 
 ## Known Bugs/Contact
@@ -38,4 +40,4 @@ _If you have any questions or comments at all, please submit a pull request._
 
 *This application is licensed under the MIT license.*
 
-&copy; 2020 **_Joseph Wangemann_**
+&copy; 2021 **_Joseph Wangemann_**
