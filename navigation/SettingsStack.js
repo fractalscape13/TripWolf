@@ -6,9 +6,9 @@ import EditProfileScreen from '../screens/EditProfileScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
 
-const ProfileStack = createStackNavigator();
+const SettingsStack = createStackNavigator();
 
-export const renderProfileStack = () => {
+export const renderSettingsStack = () => {
   const headerStyle = {
     backgroundColor: "#161616",
     width: "100%",
@@ -16,8 +16,8 @@ export const renderProfileStack = () => {
   };
 
   return (
-      <ProfileStack.Navigator>
-        <ProfileStack.Screen
+      <SettingsStack.Navigator>
+        <SettingsStack.Screen
           name="ProfileScreen"
           component={ProfileScreen}
           options={{
@@ -25,7 +25,7 @@ export const renderProfileStack = () => {
             headerStyle: headerStyle,
           }}
         />
-        <ProfileStack.Screen
+        <SettingsStack.Screen
           name="EditProfileScreen"
           component={EditProfileScreen}
           options={{
@@ -35,7 +35,7 @@ export const renderProfileStack = () => {
             headerRight: null
           }}
         />
-        <ProfileStack.Screen
+        <SettingsStack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
           options={() => ({
@@ -45,6 +45,6 @@ export const renderProfileStack = () => {
             headerLeft: null
           })}
         />
-      </ProfileStack.Navigator>
+      </SettingsStack.Navigator>
   );
 };

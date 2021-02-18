@@ -1,6 +1,5 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import MessagingNavigation from './MessagingNavigation';
 import { FontAwesome5, Entypo } from '@expo/vector-icons';
 import { StyleSheet } from "react-native";
 import { renderExploreStack } from '../navigation/ExploreStack';
