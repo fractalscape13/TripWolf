@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   signIn: {
     backgroundColor: "#DDE2E4",
-    width: 100,
+    width: 250,
     marginTop: 20,
     marginBottom: 15,
     padding: 5,

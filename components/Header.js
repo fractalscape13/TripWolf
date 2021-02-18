@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Dimensions
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, Octicons } from "@expo/vector-icons";
 import { useNavigation, DrawerActions } from "@react-navigation/native";
 
 const Header = (props) => {
@@ -32,13 +32,13 @@ const Header = (props) => {
           }
         </View>
         <View style={props.isSplash ? styles.navIconRightHidden : props.isHome? styles.navIconRight : styles.navIconRightHidden} pointerEvents={ props.isSplash ? "none" : props.isHome? 'auto' : 'none'}>
-          <Ionicons
+          <Octicons
           style={styles.hamburger}
           onPress={() => {
             navigation.dispatch(DrawerActions.toggleDrawer());
           }}
-          name="ios-menu"
-          size={45}
+          name="gear"
+          size={35}
           color="#DDE2E4"
           resizeMode="contain"
           /> 
