@@ -16,7 +16,7 @@ const TabNav = () => {
           name="HomeStack" 
           component={renderHomeStack} 
           options={{
-            tabBarIcon: ({color}) => (<Entypo name="home" size={28} color={color} />),
+            tabBarIcon: ({color}) => (<FontAwesome5 name="scroll" size={28} color={color} />),
           }}
           />
         <Tabs.Screen 

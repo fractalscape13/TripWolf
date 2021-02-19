@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import goblin from '../assets/goblin.png';
 
-const ProfileScreen = () => {
+const SettingsScreen = () => {
   return (
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>YOUR PROFILE</Text>
+        <Text style={styles.body}>YOUR PROFILE AND PRIVACY SETTINGS</Text>
       </View>
     </View>
   )
@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
     width: "100%",
     height: "100%",
     backgroundColor: "rgba(16,16,16, 0.4)",
-    paddingVertical: 40,
-    paddingHorizontal: 20,
+    paddingVertical: "35%",
+    paddingHorizontal: "30%",
   },
   backgroundImage: {
     flex: 1,
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileScreen;
+export default SettingsScreen;

@@ -7,7 +7,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>T  R  I  P</Text>
+        <Text style={styles.body}>T   R   I   P</Text>
         <Text style={styles.body}>FUCKING</Text>
         <Text style={styles.body}>W  O  L  F</Text>
       </View>
@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
     width: "100%",
     height: "100%",
     backgroundColor: "rgba(16,16,16, 0.4)",
-    paddingVertical: 40,
-    paddingHorizontal: 20,
+    paddingVertical: "25%",
+    paddingHorizontal: "15%",
   },
   backgroundImage: {
     flex: 1,

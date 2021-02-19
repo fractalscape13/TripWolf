@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
-import MapScreen from '../screens/MapScreen';
+import MapScreen from '../screens/ExploreScreen';
 
 const ExploreStack = createStackNavigator();
 
@@ -25,16 +25,6 @@ export const renderExploreStack = () => {
             headerStyle: headerStyle,
           }}
         />
-        {/* <ExploreStack.Screen
-          name="EditProfileScreen"
-          component={EditProfileScreen}
-          options={{
-            headerTitle: () => <Header isHome={false} subheaderTitle={"Edit Profile"}/>,
-            headerStyle: headerStyle,
-            headerLeft: null,
-            headerRight: null
-          }}
-        /> */}
         <ExploreStack.Screen
           name="LoadingScreen"
           component={LoadingScreen}

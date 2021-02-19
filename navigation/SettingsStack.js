@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import ProfileScreen from '../screens/ProfileScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import EditProfileScreen from '../screens/EditProfileScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import Header from '../components/Header';
@@ -18,10 +18,10 @@ export const renderSettingsStack = () => {
   return (
       <SettingsStack.Navigator>
         <SettingsStack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
+          name="SettingsScreen"
+          component={SettingsScreen}
           options={{
-            headerTitle: () => <Header subheaderTitle={"Profile"}/>,
+            headerTitle: () => <Header subheaderTitle={"Settings"}/>,
             headerStyle: headerStyle,
           }}
         />
