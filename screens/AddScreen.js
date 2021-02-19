@@ -1,13 +1,27 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import goblin from '../assets/goblin.png';
 
 const AddScreen = () => {
+
+  const doThis = () => {
+    // dummy function for buttons //
+    return
+  }
+
   return (
     <View style={styles.container}>
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
-        <Text style={styles.body}>Add a new destination</Text>
+        <TouchableOpacity onPress={doThis}>
+          <Text style={styles.body}>New album</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={doThis}>
+          <Text style={styles.body}>Upload image</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={doThis}>
+          <Text style={styles.body}>Add a note</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
@@ -39,10 +53,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   body: {
-    marginTop: 10,
+    padding: "2%",
+    margin: "3%",
     fontSize: 18,
     color: "white",
     textAlign: "center",
+    borderStyle: "solid",
+    borderColor: "white",
+    borderWidth: 1,
+    borderRadius: 7
   },
 });
 

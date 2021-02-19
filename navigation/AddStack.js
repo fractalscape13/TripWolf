@@ -20,7 +20,7 @@ export const renderAddStack = () => {
           component={AddScreen}
           options={{
             headerTitle: () => <Header isHome={true}
-            subheaderTitle={"Create"}/>,
+            subheaderTitle={" "}/>,
             headerStyle: headerStyle,
           }}
         />
