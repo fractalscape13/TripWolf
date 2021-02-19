@@ -24,16 +24,6 @@ export const renderAddStack = () => {
             headerStyle: headerStyle,
           }}
         />
-        {/* <AddStack.Screen
-          name="EditProfileScreen"
-          component={EditProfileScreen}
-          options={{
-            headerTitle: () => <Header isHome={false} subheaderTitle={"Edit Profile"}/>,
-            headerStyle: headerStyle,
-            headerLeft: null,
-            headerRight: null
-          }}
-        /> */}
         <AddStack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
