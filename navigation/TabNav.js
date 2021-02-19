@@ -1,7 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome5, Entypo } from '@expo/vector-icons';
-import { StyleSheet } from "react-native";
 import { renderExploreStack } from '../navigation/ExploreStack';
 import { renderAddStack } from '../navigation/AddStack';
 import { renderHomeStack } from '../navigation/HomeStack';
@@ -34,30 +33,5 @@ const TabNav = () => {
       </Tabs.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  dot: {
-    ...Platform.select({
-      ios: {
-        position: "absolute",
-        top: 4,
-        right: -2,
-      },
-      android: {
-        position: "absolute",
-        right: -1,
-        top: 4,
-      },
-    }),
-    backgroundColor: "red",
-    width: 10,
-    height: 10,
-    borderRadius: 90,
-    zIndex: 3
-  },
-  msesageIcon: {
-    flex: 1
-  }
-});
 
 export default TabNav;
