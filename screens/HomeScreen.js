@@ -8,7 +8,6 @@ const HomeScreen = () => {
       <Image source={goblin} style={styles.backgroundImage}></Image>
       <View style={styles.textWrapper} >
         <Text style={styles.body}>T   R   I   P</Text>
-        <Text style={styles.body}>FUCKING</Text>
         <Text style={styles.body}>W  O  L  F</Text>
       </View>
     </View>
