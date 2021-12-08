@@ -3,7 +3,8 @@ import {
   Text,
   View,
   StyleSheet,
-  Dimensions
+  Dimensions,
+  TouchableOpacity
 } from "react-native";
 import { Ionicons, Octicons } from "@expo/vector-icons";
 import { useNavigation, DrawerActions } from "@react-navigation/native";
@@ -14,15 +15,18 @@ const Header = (props) => {
 
   return (
     <View style={styles.MainHeaderWrapper}>
-         <View style={ props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} pointerEvents={ props.isSplash ? "none" : props.isHome? 'none' : 'auto'}>
-            <Ionicons
-            onPress={() => {navigation.goBack()}}
-            name="ios-arrow-back"
-            size={45}
-            color="#DDE2E4"
-            resizeMode="contain"
-            />
-        </View>
+         <TouchableOpacity 
+          style={ props.isSplash ? styles.navIconLeftHidden : props.isHome ? styles.navIconLeftHidden : styles.navIconLeft} 
+          disabled={ props.isSplash ? true : props.isHome? true : false}
+        >
+          <Ionicons
+          onPress={() => {navigation.goBack()}}
+          name="ios-arrow-back"
+          size={45}
+          color="#DDE2E4"
+          resizeMode="contain"
+          />
+        </TouchableOpacity>
         <View styles={styles.logoContainer}>
           {props.subheaderTitle ? 
             <Text style={{fontSize: 30, fontWeight: "200", color: "white", }}>{props.subheaderTitle}</Text> 
@@ -30,7 +34,10 @@ const Header = (props) => {
             <Text style={{fontSize: 30, fontWeight: "250", color: "white", }}>TripWolf</Text>
           }
         </View>
-        <View style={props.isSplash ? styles.navIconRightHidden : props.isHome? styles.navIconRight : styles.navIconRightHidden} pointerEvents={ props.isSplash ? "none" : props.isHome? 'auto' : 'none'}>
+        <TouchableOpacity 
+          style={props.isSplash ? styles.navIconRightHidden : props.isHome? styles.navIconRight : styles.navIconRightHidden} 
+          disabled={ props.isSplash ? true : props.isHome? false : true}
+        >
           <Octicons
           style={styles.hamburger}
           onPress={() => {
@@ -41,7 +48,8 @@ const Header = (props) => {
           color="#DDE2E4"
           resizeMode="contain"
           /> 
-        </View>
+        </TouchableOpacity>
+          
     </View>
   );
 };
